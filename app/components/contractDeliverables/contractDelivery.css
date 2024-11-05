@@ -1,0 +1,122 @@
+/* Base styling */
+:root {
+    --background: #ffffff;
+    --secMainColor: linear-gradient(40deg, #016DEA, #FA0101);
+    --revSecMainColor: linear-gradient(-40deg, #016DEA, #FA0101);
+    --mainColor: #63636380;
+}
+
+.gradient-text {
+    background: linear-gradient(40deg, #016DEA, #FA0101);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    margin-left: 20px;
+    background: var(--secMainColor);
+    padding: 7px 15px;
+    border-radius: 20px;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--revSecMainColor);
+}
+
+.dates {
+    font-size: 15px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+.title {
+    font-weight: 600;
+    font-family: system-ui;
+    font-size: large;
+}
+
+/* Card styles */
+.card1 {
+    position: relative;
+    flex: 0 1 calc(50% - 2px);
+    /* Default: Two cards per row on small screens */
+    height: 95px;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+}
+
+.colored {
+    background: var(--secMainColor);
+}
+
+.menu-card {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: 1px solid white;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    width: 18px;
+}
+
+.card1 img {
+    top: 8%;
+}
+
+/* Responsive grid for cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+@media (min-width: 640px) {
+
+    /* Medium screens (sm): Three columns */
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+@media (max-width: 640px) {
+.footer-img {
+        border-radius: 21px;
+    }
+        .btn1 {
+            position: absolute;
+            top: 12%;
+            left: 1%;
+            margin-left: 7px;
+            background: var(--secMainColor);
+            padding: 6px;
+            width: 68px;
+            border-radius: 20px;
+            color: white;
+            font-size: 8px;
+        }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card1 {
+        flex: 0 1 calc(100% / 6 - 2px);
+    }
+}

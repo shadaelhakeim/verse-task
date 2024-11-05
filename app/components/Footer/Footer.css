@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.footer-gradient {
+    background: linear-gradient(to right, #1e3a8a, #6d28d9, #dc2626);
+}
+.footer-img{
+    border-radius: 40px;
+}
+.btn1{
+    position: absolute;
+    top: 12%;
+    left: 1%;
+    margin-left: 20px;
+    background: var(--secMainColor);
+    padding: 6px;
+    width: 117px;
+    border-radius: 20px;
+    color: white;
+}
+.f-logo{
+    font-size: 50px;
+        font-weight: 900;
+        font-family: system-ui;
+}
